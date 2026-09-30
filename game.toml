@@ -6,7 +6,9 @@ name = "Armored Core"
 id = "SCES-00842"
 players = 1
 exe = "disc/SCES_008.42"
-disc = ""
+disc = "disc/Armored Core (Europe) (En,Fr,De,Es,It).cue"
+discs = ["disc/Armored Core (Europe) (En,Fr,De,Es,It).cue"]
+disc_serials = ["SCES-00842"]
 load_address = "0x80011000"
 entry_pc = "0x80011E50"
 text_size = "0x00029800"
@@ -30,11 +32,13 @@ known_crc32 = [
 ]
 
 [recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+openbios = false
 window_title = "armored-core- Recompiled"
 memcard_dir = "saves"
 
